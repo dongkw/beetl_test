@@ -12,13 +12,10 @@ import org.beetl.sql.core.annotatoin.AutoID;
  * @data 2018/7/26 上午9:35
  */
 @Data
-@Table(name = "user")
 public class User {
 
-  @AutoID
   private Long id;
   private String name;
   private String pwd;
-  @Column(name = "dept_id")
   private Long deptId;
 }
