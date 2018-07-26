@@ -1,10 +1,6 @@
 package com.example.beetl_test1.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
 import lombok.Data;
-import org.beetl.sql.core.TailBean;
-import org.beetl.sql.core.annotatoin.AutoID;
 
 
 /**
