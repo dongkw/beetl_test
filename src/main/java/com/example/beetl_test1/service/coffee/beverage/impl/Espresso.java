@@ -1,6 +1,9 @@
 package com.example.beetl_test1.service.coffee.beverage.impl;
 
+import static com.example.beetl_test1.service.coffee.beverage.BeverageEnum.TALL;
+
 import com.example.beetl_test1.service.coffee.beverage.Beverage;
+import com.example.beetl_test1.service.coffee.beverage.BeverageEnum;
 
 /**
  * @Author dkw[dongkewei@xinzhili.cn]
@@ -14,6 +17,16 @@ public class Espresso extends Beverage {
 
   @Override
   public double cost() {
-    return 9.9;
+    switch (this.getSize()) {
+      case TALL:
+        return 3.0;
+      case GRANDE:
+        return 6.0;
+      case VENTI:
+        return 9.0;
+      default:
+        return 0;
+    }
   }
+
 }

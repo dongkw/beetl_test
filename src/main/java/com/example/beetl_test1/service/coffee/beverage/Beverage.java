@@ -9,7 +9,8 @@ import lombok.Data;
 @Data
 public abstract class Beverage {
 
-  private String description = "Unknown Beverage";
+  private BeverageEnum size;
+  private String description;
 
   public abstract double cost();
 }

@@ -1,6 +1,7 @@
 package com.example.beetl_test1.service.coffee.test;
 
 import com.example.beetl_test1.service.coffee.beverage.Beverage;
+import com.example.beetl_test1.service.coffee.beverage.BeverageEnum;
 import com.example.beetl_test1.service.coffee.beverage.impl.Espresso;
 import com.example.beetl_test1.service.coffee.beverage.impl.HouseBlend;
 import com.example.beetl_test1.service.coffee.condiment.impl.Mocha;
@@ -15,9 +16,11 @@ public class StartBuzzCoffee {
 
   public static void main(String[] args) {
     Beverage beverage = new Espresso();
-    System.out.println(beverage.getDescription() + " $ " + beverage.cost());
+    beverage.setSize(BeverageEnum.GRANDE);
+    System.out.println(beverage.getSize() + beverage.getDescription() + " $ " + beverage.cost());
 
     Beverage beverage1 = new HouseBlend();
+    beverage1.setSize(BeverageEnum.VENTI);
     beverage1 = new Mocha(beverage1);
     beverage1 = new Soy(beverage1);
     beverage1 = new Whip(beverage1);

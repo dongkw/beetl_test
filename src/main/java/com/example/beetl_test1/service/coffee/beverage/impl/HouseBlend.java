@@ -1,6 +1,7 @@
 package com.example.beetl_test1.service.coffee.beverage.impl;
 
 import com.example.beetl_test1.service.coffee.beverage.Beverage;
+import com.example.beetl_test1.service.coffee.beverage.BeverageEnum;
 
 /**
  * @Author dkw[dongkewei@xinzhili.cn]
@@ -14,6 +15,15 @@ public class HouseBlend extends Beverage {
 
   @Override
   public double cost() {
-    return 8.8;
+    switch (getSize()) {
+      case TALL:
+        return 5.0;
+      case GRANDE:
+        return 8.0;
+      case VENTI:
+        return 9.0;
+      default:
+        return 0;
+    }
   }
 }
